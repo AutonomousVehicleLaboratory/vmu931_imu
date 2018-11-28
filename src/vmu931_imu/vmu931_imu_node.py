@@ -495,13 +495,13 @@ class Vmu931Node:
 			
 				self._imu_msg.header.stamp = current_time
 				#print dir(self._imu_msg.angular_velocity) 
-				self._imu_msg.angular_velocity.x = 0
-				self._imu_msg.angular_velocity.y = 0
-				self._imu_msg.angular_velocity.z = 0
+				self._imu_msg.angular_velocity.x = math.radians(gy.x)
+				self._imu_msg.angular_velocity.y = math.radians(gy.y)
+				self._imu_msg.angular_velocity.z = math.radians(euler.z)
 				
-				self._imu_msg.linear_acceleration.x = 0
-				self._imu_msg.linear_acceleration.y = 0
-				self._imu_msg.linear_acceleration.z = 0
+				self._imu_msg.linear_acceleration.x = acc.x*9.81
+				self._imu_msg.linear_acceleration.y = acc.y*9.81
+				self._imu_msg.linear_acceleration.z = acc.y*9.81
 				
 				self._imu_msg.orientation.x = quat.x
 				self._imu_msg.orientation.y = quat.y
