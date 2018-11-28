@@ -2,11 +2,11 @@
 <launch>
 
 <arg name="port" default="/dev/ttyACM0"/>
-<arg name="mode" default="quaternion-euler-heading"/>
+<arg name="mode" default="custom"/>
 <arg name="quaternion" default="true"/>
-<arg name="gyroscope" default="false"/>
+<arg name="gyroscope" default="true"/>
 <arg name="euler" default="true"/>
-<arg name="accelerometer" default="false"/>
+<arg name="accelerometer" default="ture"/>
 <arg name="magnetometer" default="false"/>
 <arg name="heading" default="true"/>
 
